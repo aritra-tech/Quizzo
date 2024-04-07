@@ -11,6 +11,7 @@
 		9AA260902BC2D52D004F5223 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA2608F2BC2D52D004F5223 /* ContentView.swift */; };
 		9AA260922BC2D52E004F5223 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AA260912BC2D52E004F5223 /* Assets.xcassets */; };
 		9AA260952BC2D52E004F5223 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AA260942BC2D52E004F5223 /* Preview Assets.xcassets */; };
+		9AA2609D2BC2D5F9004F5223 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA2609C2BC2D5F9004F5223 /* PrimaryButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		9AA2608F2BC2D52D004F5223 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9AA260912BC2D52E004F5223 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9AA260942BC2D52E004F5223 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9AA2609C2BC2D5F9004F5223 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,7 @@
 		9AA2608C2BC2D52D004F5223 /* Quizzo */ = {
 			isa = PBXGroup;
 			children = (
+				9AA2609B2BC2D5C8004F5223 /* Components */,
 				9AA2608D2BC2D52D004F5223 /* QuizzoApp.swift */,
 				9AA2608F2BC2D52D004F5223 /* ContentView.swift */,
 				9AA260912BC2D52E004F5223 /* Assets.xcassets */,
@@ -65,6 +68,14 @@
 				9AA260942BC2D52E004F5223 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9AA2609B2BC2D5C8004F5223 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				9AA2609C2BC2D5F9004F5223 /* PrimaryButton.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +148,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AA2609D2BC2D5F9004F5223 /* PrimaryButton.swift in Sources */,
 				9AA260902BC2D52D004F5223 /* ContentView.swift in Sources */,
 				9AA2608E2BC2D52D004F5223 /* QuizzoApp.swift in Sources */,
 			);
