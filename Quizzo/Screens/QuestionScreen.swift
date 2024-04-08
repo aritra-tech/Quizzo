@@ -31,7 +31,14 @@ struct QuestionScreen: View {
                     .bold()
                     .foregroundStyle(Color(.gray))
                     .multilineTextAlignment(.center)
+                
+                AnswerField(answer: Answer(text: "True", isCorrect: false))
+                AnswerField(answer: Answer(text: "False", isCorrect: true))
             }
+            
+            PrimaryButton(text: "Next")
+            
+            Spacer()
         }
         .padding()
         .frame(maxWidth: .infinity, maxHeight: .infinity)
