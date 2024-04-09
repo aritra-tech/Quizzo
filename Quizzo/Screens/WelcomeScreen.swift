@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct WelcomeScreen: View {
-    @StateObject var quizzoManager: QuizzoManager
+    @StateObject var quizzoManager =  QuizzoManager()
     
     var body: some View {
         NavigationView {
@@ -29,7 +29,7 @@ struct WelcomeScreen: View {
                         .fontWeight(.regular)
                 }
                 NavigationLink {
-                    TriviaScreen()
+                    ResultScreen()
                         .environmentObject(quizzoManager)
                 } label: {
                     PrimaryButton(text: "Let's get started!")
@@ -44,5 +44,5 @@ struct WelcomeScreen: View {
 }
 
 #Preview {
-    WelcomeScreen(quizzoManager: QuizzoManager())
+    WelcomeScreen()
 }

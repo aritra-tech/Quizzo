@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9A3447E02BC3F5C7001E7811 /* AnswerField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3447DF2BC3F5C7001E7811 /* AnswerField.swift */; };
-		9A3447E22BC4391C001E7811 /* TriviaScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3447E12BC4391C001E7811 /* TriviaScreen.swift */; };
+		9A3447E22BC4391C001E7811 /* ResultScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3447E12BC4391C001E7811 /* ResultScreen.swift */; };
 		9A3447E42BC43D0B001E7811 /* Trivia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3447E32BC43D0B001E7811 /* Trivia.swift */; };
 		9A3447E72BC44263001E7811 /* QuizzoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3447E62BC44263001E7811 /* QuizzoManager.swift */; };
 		9A6334F52BC33AFF00336597 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6334F42BC33AFF00336597 /* Answer.swift */; };
@@ -24,7 +24,7 @@
 
 /* Begin PBXFileReference section */
 		9A3447DF2BC3F5C7001E7811 /* AnswerField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerField.swift; sourceTree = "<group>"; };
-		9A3447E12BC4391C001E7811 /* TriviaScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriviaScreen.swift; sourceTree = "<group>"; };
+		9A3447E12BC4391C001E7811 /* ResultScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultScreen.swift; sourceTree = "<group>"; };
 		9A3447E32BC43D0B001E7811 /* Trivia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trivia.swift; sourceTree = "<group>"; };
 		9A3447E62BC44263001E7811 /* QuizzoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizzoManager.swift; sourceTree = "<group>"; };
 		9A6334F42BC33AFF00336597 /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
@@ -121,7 +121,7 @@
 			children = (
 				9AA2609F2BC2D919004F5223 /* WelcomeScreen.swift */,
 				9AA260A12BC2DBF1004F5223 /* QuestionScreen.swift */,
-				9A3447E12BC4391C001E7811 /* TriviaScreen.swift */,
+				9A3447E12BC4391C001E7811 /* ResultScreen.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -197,7 +197,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A3447E02BC3F5C7001E7811 /* AnswerField.swift in Sources */,
-				9A3447E22BC4391C001E7811 /* TriviaScreen.swift in Sources */,
+				9A3447E22BC4391C001E7811 /* ResultScreen.swift in Sources */,
 				9A3447E72BC44263001E7811 /* QuizzoManager.swift in Sources */,
 				9A3447E42BC43D0B001E7811 /* Trivia.swift in Sources */,
 				9AA2609D2BC2D5F9004F5223 /* PrimaryButton.swift in Sources */,
