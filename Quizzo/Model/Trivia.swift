@@ -19,7 +19,7 @@ struct Trivia: Decodable {
         var difficulty: String
         var question: String
         var correctAnswer: String
-        var incorrectAnswer: [String]
+        var incorrectAnswers: [String]
         
         var formattedQuestion: AttributedString {
             do {
@@ -33,7 +33,7 @@ struct Trivia: Decodable {
         var answer: [Answer] {
             do {
                 let correct = [Answer(text: try AttributedString(markdown: correctAnswer), isCorrect: true)]
-                let incorrect = try incorrectAnswer.map { answer in
+                let incorrect = try incorrectAnswers.map { answer in
                     Answer(text: try AttributedString(markdown: answer), isCorrect: false)
                 }
                 let allAnswers = correct + incorrect

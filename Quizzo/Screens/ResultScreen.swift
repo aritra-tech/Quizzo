@@ -12,10 +12,14 @@ struct ResultScreen: View {
     
     var body: some View {
         if manager.reachedEnd {
-            VStack {
+            VStack(spacing: 20) {
                 Text("Congratulations you have completed the game ! 🎉")
+                    .font(.title)
+                    .multilineTextAlignment(.center)
                 
                 Text("Your score is \(manager.score) out of \(manager.length)")
+                    .font(.title2)
+                    .bold()
                 
                 Button {
                     Task.init {
