@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AnswerField: View {
-    
+    @EnvironmentObject var manager: QuizzoManager
     var answer: Answer
     
     @State private var isSelected = false
@@ -26,21 +26,26 @@ struct AnswerField: View {
             if isSelected {
                 Spacer()
                 
-                Image(systemName: answer.isCorrect ? "checkmark.circle.fill" : "x.circle.fill")
+                Image(systemName: answer.isCorrect ? "checkmark.circle" : "x.circle")
                     .foregroundStyle(Color(answer.isCorrect ? green : red))
             }
         }
         .padding()
         .frame(maxWidth: .infinity, alignment: .leading)
-        .background(Color(.lightGray))
+        .foregroundStyle(Color(manager.answerSelected ? (isSelected ? Color(.lightGray) : .gray): Color(.lightGray)))
+        .background(.white)
         .cornerRadius(10)
         .shadow(color: isSelected ? (answer.isCorrect ? green : red) : .gray ,radius: 5, x: 0.5, y: 0.5)
         .onTapGesture {
-            isSelected = true
+            if !manager.answerSelected {
+                isSelected = true
+                manager.selectedAnswer(answer: answer)
+            }
         }
     }
 }
 
 #Preview {
     AnswerField(answer: Answer(text: "Question", isCorrect: false))
+        .environmentObject(QuizzoManager())
 }

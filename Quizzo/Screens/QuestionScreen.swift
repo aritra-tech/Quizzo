@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct QuestionScreen: View {
+    @EnvironmentObject var manager: QuizzoManager
+    
     var body: some View {
         VStack(spacing: 40) {
             HStack {
@@ -17,26 +19,33 @@ struct QuestionScreen: View {
                 
                 Spacer()
                 
-                Text("1 out of 10")
+                Text("\(manager.index + 1) out of \(manager.length)")
                     .font(.title3)
                     .fontWeight(.heavy)
                     .foregroundStyle(Color(.black))
             }
             
-            ProgressBar(progressValue: 90)
+            ProgressBar(progressValue: manager.progress)
             
             VStack(alignment: .leading, spacing: 20) {
-                Text("In World of Warcraft the default UI color that signifies Druid is what?")
+                Text(manager.question)
                     .font(.system(size: 18))
                     .bold()
                     .foregroundStyle(Color(.gray))
                     .multilineTextAlignment(.center)
                 
-                AnswerField(answer: Answer(text: "True", isCorrect: false))
-                AnswerField(answer: Answer(text: "False", isCorrect: true))
+                ForEach(manager.answerChoices, id: \.id) { answer in
+                    AnswerField(answer: answer)
+                        .environmentObject(manager)
+                }
             }
-            
-            PrimaryButton(text: "Next")
+            Button {
+                manager.goToNextQuestion()
+            } label: {
+                PrimaryButton(text: "Next", background:
+                                manager.answerSelected ? Color(.lightGray) : Color(hue: 1.0, saturation: 0.0, brightness: 0.564, opacity: 0.327))
+            }
+            .disabled(!manager.answerSelected)
             
             Spacer()
         }
@@ -47,4 +56,5 @@ struct QuestionScreen: View {
 
 #Preview {
     QuestionScreen()
+        .environmentObject(QuizzoManager())
 }

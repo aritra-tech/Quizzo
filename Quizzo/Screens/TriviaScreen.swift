@@ -8,11 +8,15 @@
 import SwiftUI
 
 struct TriviaScreen: View {
+    @EnvironmentObject var manager: QuizzoManager
+    
     var body: some View {
         QuestionScreen()
+            .environmentObject(manager)
     }
 }
 
 #Preview {
     TriviaScreen()
+        .environmentObject(QuizzoManager())
 }

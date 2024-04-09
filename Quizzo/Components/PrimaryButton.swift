@@ -10,13 +10,14 @@ import SwiftUI
 struct PrimaryButton: View {
     
     var text: String
+    var background: Color = Color(.lightGray)
     
     var body: some View {
         Text(text)
             .foregroundStyle(Color(.white))
             .padding()
             .padding(.horizontal)
-            .background(.black)
+            .background(background)
             .cornerRadius(40)
             .shadow(radius: 10)
     }
