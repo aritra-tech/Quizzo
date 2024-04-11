@@ -33,12 +33,13 @@ struct WelcomeScreen: View {
                         .environmentObject(quizzoManager)
                 } label: {
                     PrimaryButton(text: "Let's get started!")
+                        .frame(maxWidth: 550)
                 }
             }
             .padding()
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .edgesIgnoringSafeArea(.all)
-            .background(.white)
+            .background(Color("AccentColor"))
         }
     }
 }
