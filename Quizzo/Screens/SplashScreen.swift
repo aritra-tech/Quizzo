@@ -16,9 +16,11 @@ struct SplashScreen: View {
             if self.isActive {
                 WelcomeScreen()
             } else {
-                Text("Quizzo")
-                    .font(.largeTitle)
-                    .italic()
+                
+                Image("Quizzo")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 240, height: 240)
                 
             }
         }
@@ -31,7 +33,7 @@ struct SplashScreen: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .edgesIgnoringSafeArea(.all)
-        .background(.white)
+        .background(Color("AccentColor"))
     }
 }
 
