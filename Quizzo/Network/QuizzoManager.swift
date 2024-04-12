@@ -63,7 +63,7 @@ class QuizzoManager: ObservableObject {
     
     func setQuestion() {
         answerSelected = false
-        progress = CGFloat(Double(index + 1) / Double(length) * 350)
+        progress = CGFloat(Double(index + 1) / Double(length) * 310)
         
         if index < length {
             let currentQuestion = trivia[index]
