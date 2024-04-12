@@ -12,26 +12,22 @@ struct QuestionScreen: View {
     
     var body: some View {
         VStack(spacing: 40) {
+            
             HStack {
-                Text("General Knowledge")
-                    .font(.title2)
-                    .foregroundStyle(Color(.black))
+                ProgressBar(progressValue: manager.progress)
                 
-                Spacer()
-                
-                Text("\(manager.index + 1) out of \(manager.length)")
-                    .font(.title3)
-                    .fontWeight(.heavy)
-                    .foregroundStyle(Color(.black))
+                Text("\(manager.index + 1) / \(manager.length)")
+                    .font(.system(size: 14))
+                    .fontWeight(.light)
+                    .foregroundStyle(Color(.lightGray))
             }
             
-            ProgressBar(progressValue: manager.progress)
-            
             VStack(alignment: .leading, spacing: 20) {
+                
                 Text(manager.question)
-                    .font(.system(size: 18))
+                    .font(.system(size: 22))
+                    .foregroundStyle(Color(.black))
                     .bold()
-                    .foregroundStyle(Color(.gray))
                     .multilineTextAlignment(.center)
                 
                 ForEach(manager.answerChoices, id: \.id) { answer in
@@ -43,14 +39,16 @@ struct QuestionScreen: View {
                 manager.goToNextQuestion()
             } label: {
                 PrimaryButton(text: "Next", background:
-                                manager.answerSelected ? Color(.lightGray) : Color(hue: 1.0, saturation: 0.0, brightness: 0.564, opacity: 0.327))
+                                manager.answerSelected ? Color("Green") : Color(hue: 1.0, saturation: 0.0, brightness: 0.564, opacity: 0.327))
             }
             .disabled(!manager.answerSelected)
             
             Spacer()
         }
         .padding()
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+        .background(Color("AccentColor"))
+        .navigationBarHidden(true)
     }
 }
 

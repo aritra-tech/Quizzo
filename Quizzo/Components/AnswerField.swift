@@ -21,6 +21,9 @@ struct AnswerField: View {
                 .font(.caption)
             
             Text(answer.text)
+                .font(.system(size: 18))
+                .foregroundStyle(Color(.black))
+
                 .bold()
             
             if isSelected {
@@ -35,7 +38,7 @@ struct AnswerField: View {
         .foregroundStyle(Color(manager.answerSelected ? (isSelected ? Color(.lightGray) : .gray): Color(.lightGray)))
         .background(.white)
         .cornerRadius(10)
-        .shadow(color: isSelected ? (answer.isCorrect ? green : red) : .gray ,radius: 5, x: 0.5, y: 0.5)
+        .shadow(color: isSelected ? (answer.isCorrect ? green : red) : .gray ,radius: 5)
         .onTapGesture {
             if !manager.answerSelected {
                 isSelected = true
