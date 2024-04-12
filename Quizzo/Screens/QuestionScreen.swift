@@ -35,6 +35,9 @@ struct QuestionScreen: View {
                         .environmentObject(manager)
                 }
             }
+            
+            Spacer()
+            
             Button {
                 manager.goToNextQuestion()
             } label: {

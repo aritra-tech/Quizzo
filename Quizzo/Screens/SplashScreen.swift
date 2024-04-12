@@ -10,7 +10,7 @@ import SwiftUI
 struct SplashScreen: View {
     
     @State private var isActive: Bool = false
-
+    
     var body: some View {
         ZStack {
             if self.isActive {
