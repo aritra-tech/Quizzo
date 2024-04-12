@@ -10,6 +10,7 @@ import SwiftUI
 struct ResultScreen: View {
     @EnvironmentObject var manager: QuizzoManager
     
+    
     var body: some View {
         if manager.reachedEnd {
             VStack(spacing: 30) {
@@ -19,13 +20,15 @@ struct ResultScreen: View {
                     .scaledToFit()
                     .frame(width: 143.78, height: 151.11)
                 
-                Text("Congratulations! 🎉")
+                Text("Results of the Quiz")
                     .font(.system(size: 22, weight: .bold))
                     .multilineTextAlignment(.center)
                 
-                Text("Your score is \(manager.score) out of \(manager.length)")
-                    .font(.title2)
-                    .bold()
+
+                VStack {
+                    ResultCardView(card: CardData(title: "TOTAL QUESTIONS", value: manager.length))
+                    ResultCardView(card: CardData(title: "CORRECT QUESTIONS", value: manager.score))
+                }
                 
                 Spacer()
                 
