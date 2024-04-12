@@ -12,12 +12,11 @@ struct WelcomeScreen: View {
     
     var body: some View {
         NavigationView {
-            VStack(spacing: 40) {
+            VStack {
                 VStack(spacing: 30) {
-                    Text("Quizzo")
-                        .font(.title)
-                        .fontWeight(.bold)
-                        .foregroundStyle(Color(.black))
+                    Text("Q")
+                        .font(.system(size: 50, weight: .heavy,design: .default))
+                    
                     
                     Text("Welcome to Quizzo")
                         .font(.title2)
