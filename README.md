@@ -6,7 +6,7 @@ A minimal Quiz iOS application made using SwiftUI and Trivia API
 - [SwiftUI](https://developer.apple.com/documentation/swiftui/) - SwiftUI is an innovative, exceptionally simple way to build user interfaces across all Apple platforms with the power of Swift.
 
 ## License
-
+```
    Copyright 2024 Aritra Das
 
    Licensed under the Apache License, Version 2.0 (the "License");
@@ -20,3 +20,4 @@ A minimal Quiz iOS application made using SwiftUI and Trivia API
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.
+```
