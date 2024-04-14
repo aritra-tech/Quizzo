@@ -1,6 +1,17 @@
+<div align="center">
+
+![Logo](https://github.com/aritra-tech/Quizzo/assets/80090908/48b7c041-796f-426b-9f76-4d68ba2d7726)
+
+</div>
+
 # Quizzo
 
 A minimal Quiz iOS application made using SwiftUI and Trivia API
+
+## Preview
+Welcome Screen | Question Screen | Result Screen
+--- | --- | ---
+![](https://github.com/aritra-tech/Quizzo/assets/80090908/9e813822-875d-4b5b-ae42-56e365e56e79) | ![](https://github.com/aritra-tech/Quizzo/assets/80090908/c2c025ec-95ee-4414-8bad-a55756c7de68) | ![](https://github.com/aritra-tech/Quizzo/assets/80090908/6367eaa3-3922-4b6e-b95d-2387653be77a)
 
 ## 🛠 Technical Background
 - [SwiftUI](https://developer.apple.com/documentation/swiftui/) - SwiftUI is an innovative, exceptionally simple way to build user interfaces across all Apple platforms with the power of Swift.
